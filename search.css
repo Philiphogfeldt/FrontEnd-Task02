@@ -1,10 +1,10 @@
 body {
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 10px;
+    margin-top: 300px;
     grid-template:
     "a"
-    "b";
   }
 
   #MainTitel, #SearchBar {
