@@ -1,0 +1,12 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    grid-template:
+    "a"
+    "b";
+  }
+
+  #MainTitel, #SearchBar {
+    text-align: center;
+  }
