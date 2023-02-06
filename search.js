@@ -1,4 +1,4 @@
-const apiKey = '33414549-51bff4c83ee9ddf1982fd6577';
+const apiKey = '33414549-33414038-d5c773e94876b691a32d35b81';
   const searchInput = document.querySelector('#SearchInput');
   const searchForm = document.querySelector('#SearchBar');
   const resultBox = document.querySelector('#ResultBox');
