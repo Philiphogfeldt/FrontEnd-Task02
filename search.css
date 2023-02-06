@@ -3,6 +3,7 @@ body {
     place-items: center;
     margin-top: 300px;
   }
+
 #LogoBox{
 
   display: grid;
@@ -47,3 +48,9 @@ form{
     background-color: #1fb66f;
     color: #474343;
   }
+
+#ResultBox{
+  display: grid;
+  grid-template:
+  "a b" / 1fr 1fr;
+}
