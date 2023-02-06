@@ -35,7 +35,7 @@ form{
 
 #SearchButton {
     width: 40%;
-    padding: 10px 10px;
+    padding: 10px;
     background-color: #333;
     color: #f5f5f5;
     border: none;
@@ -50,12 +50,14 @@ form{
   }
 
 #ResultBox{
+  width: 800px;
+  height: 800px;
   display: grid;
   grid-template:
-  "a b" / 1fr 1fr;
+  "a b"
+  "c d"
+  "e f"
+  "g h" / 1fr 1fr;
   margin-top: 10px;
-}
-.ResultGridItem {
-  background-color: rgb(206, 62, 62);
   border: 1px solid black;
 }
