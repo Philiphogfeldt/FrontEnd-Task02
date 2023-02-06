@@ -56,6 +56,6 @@ form{
   margin-top: 10px;
 }
 .ResultGridItem {
-  background-color: lightgray;
+  background-color: rgb(206, 62, 62);
   border: 1px solid black;
 }
