@@ -3,7 +3,7 @@ const apiKey = '33414549-33414038-d5c773e94876b691a32d35b81';
   const searchForm = document.querySelector('#SearchBar');
   const resultBox = document.querySelector('#ResultBox');
 
-  searchForm.addEventListener('SearchInput', (e) => {
+  searchButton.addEventListener('click', (e) => {
     e.preventDefault();
     const searchTerm = searchInput.value;
     fetch(`https://pixabay.com/api/?key=${apiKey}&q=${searchTerm}&image_type=photo`)
@@ -22,3 +22,5 @@ const apiKey = '33414549-33414038-d5c773e94876b691a32d35b81';
       })
       .catch(error => console.error(error));
   });
+
+  resultBox = document.querySelector('#ResultBox')
