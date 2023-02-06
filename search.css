@@ -5,11 +5,11 @@ body {
   }
 
 #LogoBox{
-
   display: grid;
   grid-template:
   "a a";
 }
+
 form{
   margin-left: 120px;
   display: grid;
