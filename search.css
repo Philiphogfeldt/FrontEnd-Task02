@@ -1,12 +1,49 @@
 body {
     display: grid;
     place-items: center;
-    height: 10px;
     margin-top: 300px;
-    grid-template:
-    "a"
+  }
+#LogoBox{
+
+  display: grid;
+  grid-template:
+  "a a";
+}
+form{
+  margin-left: 120px;
+  display: grid;
+  grid-template:
+  "b c" / 1fr 1fr;
+}
+
+#SearchInput{
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#SearchBar {
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ccc;
   }
 
-  #MainTitel, #SearchBar {
-    text-align: center;
+#SearchButton {
+    width: 40%;
+    padding: 10px 10px;
+    background-color: #333;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+#SearchButton:hover {
+    background-color: #1fb66f;
+    color: #474343;
   }
