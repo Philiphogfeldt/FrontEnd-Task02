@@ -53,4 +53,9 @@ form{
   display: grid;
   grid-template:
   "a b" / 1fr 1fr;
+  margin-top: 10px;
+}
+.ResultGridItem {
+  background-color: lightgray;
+  border: 1px solid black;
 }
