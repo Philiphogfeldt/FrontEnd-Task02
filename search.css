@@ -24,7 +24,7 @@ form{
     box-shadow: 0 0 10px #ccc;
 }
 
-#SearchBar {
+#Searc {
     justify-content: center;
     align-items: center;
     background-color: #f2f2f2;
@@ -33,7 +33,7 @@ form{
     box-shadow: 0 0 10px #ccc;
   }
 
-#SearchButton {
+#submit {
     width: 40%;
     padding: 10px;
     background-color: #333;
@@ -44,7 +44,7 @@ form{
     margin-left: 10px;
   }
 
-#SearchButton:hover {
+#submit:hover {
     background-color: #1fb66f;
     color: #474343;
   }

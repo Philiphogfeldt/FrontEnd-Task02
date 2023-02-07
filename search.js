@@ -1,26 +1,29 @@
+// Find the elements.
+//https://pixabay.com/api/?key=33414549-51bff4c83ee9ddf1982fd6577&q=yellow+flowers&image_type=photo
+
 const apiKey = '33414549-51bff4c83ee9ddf1982fd6577';
-  const searchInput = document.querySelector('#SearchInput');
-  const searchForm = document.querySelector('#SearchBar');
-  const resultBox = document.querySelector('#ResultBox');
+let url = 'https://pixabay.com/api/?key=' + apiKey +'&q=' + searchInput +'&image_type=photo'
+let form = document.querySelector('form');
+let list = document.querySelector('#imgList');
 
-  searchButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const searchTerm = searchInput.value;
-    fetch(`https://pixabay.com/api/?key=${apiKey}&q=${searchTerm}&image_type=photo`)
-      .then(response => response.json())
-      .then(data => {
-        resultBox.innerHTML = '';
-        const images = data.hits;
-        images.forEach(image => {
-          const img = document.createElement('img');
-          img.src = image.webformatURL;
-          img.alt = image.tags;
-          const li = document.createElement('li');
-          li.appendChild(img);
-          resultBox.appendChild(li);
-        });
-      })
-      .catch(error => console.error(error));
-  });
+form.onsubmit = async event => {
+    // Prevent the default "reload page" behavior.
+    event.preventDefault();
 
-  resultBox = document.querySelector('#ResultBox')
+    // Get the values entered by the user.
+    let searchInput = form.searchInput.value;
+  
+    fetch(url);
+    let response = await fetch(url);
+    let json = await response.json();
+
+    // Create a list item and set its text content to the city name.
+    let listItem = document.createElement('li');
+    listItem.textContent = searchInput;
+    // Add the list item to the list.
+    list.append(listItem);
+
+    // Clear the city name input.
+    form.searchInput.value = '';
+};
+
