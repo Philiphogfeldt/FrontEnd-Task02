@@ -10,7 +10,7 @@ let list = document.querySelector('#imgList');
 form.onsubmit = async event => {
   event.preventDefault();
 
-  let searchInput = from.searchInput.value;
+  let searchInput = form.searchInput.value;
 
   let url = 'https://pixabay.com/api/?key=' + apiKey +'&q=' + searchInput;
 
@@ -18,7 +18,7 @@ form.onsubmit = async event => {
   let json = await response.json();
   
   let li = document.createElement('li');
-  li.textContent = searchInput + json.hits.tags;
+  //let searchWord = form.SearchInput.value;
 
   // Iterate over the returned image data and create list items for each image.
   json.hits.forEach(img => {
@@ -31,4 +31,3 @@ form.onsubmit = async event => {
   // Clear the search input.
   form.searchInput.value = '';
 };
-
