@@ -14,7 +14,9 @@ form.onsubmit = async event => {
   let response = await fetch(url);
   let json = await response.json();
   
-
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
+  }
   //let searchWord = form.SearchInput.value;
 
   // Iterate over the returned image data and create list items for each image.
@@ -23,12 +25,11 @@ form.onsubmit = async event => {
     let image = document.createElement('img');
     let user = document.createElement('p');
     image.src = img.webformatURL;
-    user.textContent = `: ${img.user}`;
+    user.textContent = `Photo: ${img.user}`;
     list.appendChild(li);
     li.appendChild(image);
     li.appendChild(user);
   });
-  // Clear the search input.
-  form.searchInput.value = '';
 
+  form.searchInput.value = '';
 };
