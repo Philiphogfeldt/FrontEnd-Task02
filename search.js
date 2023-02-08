@@ -9,7 +9,7 @@ form.onsubmit = async event => {
   let searchInput = form.searchInput.value;
 
   //let url = 'https://pixabay.com/api/?key=' + apiKey +'&q=' + searchInput;
-  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}`;
+  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=1&per_page=10`;
 
   let response = await fetch(url);
   let json = await response.json();
