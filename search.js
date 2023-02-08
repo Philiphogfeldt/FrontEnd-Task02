@@ -1,5 +1,3 @@
-//let url = 'https://pixabay.com/api/?key=33414549-51bff4c83ee9ddf1982fd6577&q=' + searchInput +'&image_type=photo'
-
 const apiKey = '33414549-51bff4c83ee9ddf1982fd6577';
 
 let form = document.querySelector('form');
@@ -10,7 +8,8 @@ form.onsubmit = async event => {
 
   let searchInput = form.searchInput.value;
 
-  let url = 'https://pixabay.com/api/?key=' + apiKey +'&q=' + searchInput;
+  //let url = 'https://pixabay.com/api/?key=' + apiKey +'&q=' + searchInput;
+  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}`;
 
   let response = await fetch(url);
   let json = await response.json();
@@ -24,7 +23,7 @@ form.onsubmit = async event => {
     let image = document.createElement('img');
     let user = document.createElement('p');
     image.src = img.webformatURL;
-    user.textContent = `Photo: ${img.user}`;
+    user.textContent = `: ${img.user}`;
     list.appendChild(li);
     li.appendChild(image);
     li.appendChild(user);
