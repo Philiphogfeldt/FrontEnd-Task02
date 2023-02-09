@@ -2,6 +2,7 @@ const apiKey = '33414549-51bff4c83ee9ddf1982fd6577';
 
 let form = document.querySelector('form');
 let list = document.querySelector('#imgList');
+let url;
 
 form.onsubmit = async event => {
   event.preventDefault();
@@ -9,7 +10,7 @@ form.onsubmit = async event => {
   let searchInput = form.searchInput.value;
 
   //let url = 'https://pixabay.com/api/?key=' + apiKey +'&q=' + searchInput;
-  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=1&per_page=10`;
+  url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=1&per_page=10`;
 
   let response = await fetch(url);
   let json = await response.json();
@@ -31,3 +32,4 @@ form.onsubmit = async event => {
 
   form.searchInput.value = '';
 };
+
