@@ -31,5 +31,21 @@ form.onsubmit = async event => {
   });
 
   form.searchInput.value = '';
-  
+
 };
+
+// Initialize variables to keep track of the current page and per_page parameters
+//let page = 1;
+//let per_page = 20;
+
+// Function to retrieve the next set of images
+//function getNextImages() {
+  // Make an API call to retrieve the images for the current page and per_page parameters
+  // ...
+
+  // Update the current page for the next API call
+  //page += 1;
+//}
+
+// Attach an event listener to the "Next" button
+//document.getElementById("next-button").addEventListener("click", getNextImages);
