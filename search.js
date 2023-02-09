@@ -21,7 +21,7 @@ form.onsubmit = async event => {
   json.hits.forEach(img => {
     let li = document.createElement('li');
     let image = document.createElement('img');
-    let user = document.createElement('p');
+    let user = document.createElement('photoInfo');
     image.src = img.webformatURL;
     user.textContent = `Photo: ${img.user}`;
     list.appendChild(li);

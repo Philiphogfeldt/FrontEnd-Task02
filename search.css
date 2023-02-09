@@ -50,14 +50,33 @@ form{
   }
 
 #resultBox{
-  width: 800px;
-  height: 800px;
+  border: 1px solid black;
+}
+#imgList{
+  
   display: grid;
   grid-template:
-  "a b"
-  "c d"
-  "e f"
-  "g h" / 1fr 1fr;
+  "a b c d"
+  "e f g h"
+  "i i j j" / auto 1fr;
   margin-top: 10px;
-  border: 1px solid black;
+  
+}
+img{
+  width: 400px;
+}
+li {
+  width: 400px;
+}
+#buttonBox{
+  display: grid;
+  grid-template:
+  "a b" auto 1fr;
+  gap: 5px;
+}
+#previousButton{
+ grid-area: a;
+}
+#nextButton{
+ grid-area: b;
 }
