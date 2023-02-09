@@ -18,7 +18,7 @@ html, body {
 body {
     display: grid;
     place-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
 #logoBox{
@@ -28,7 +28,6 @@ body {
 }
 
 form{
-  margin-left: 120px;
   display: grid;
   grid-template:
   "b c" / 1fr 1fr;
@@ -48,6 +47,8 @@ form{
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px #ccc;
+    margin-bottom: 20px;
+    
   }
 
 #submit {
@@ -67,22 +68,22 @@ form{
   }
 
 #resultBox{
-  border: 1px solid black;
+  margin-top: 20px;
+  
 }
 #imgList{
-  
   display: grid;
   grid-template:
   "a b c d"
   "e f g h"
   "i i j j" / auto 1fr;
-  margin-top: 10px;
-  
+  gap: 10px;
 }
 img{
   width: 400px;
 }
 li {
+  list-style-type: none;
   width: 400px;
 }
 #buttonBox{

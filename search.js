@@ -31,5 +31,5 @@ form.onsubmit = async event => {
   });
 
   form.searchInput.value = '';
+  
 };
-
