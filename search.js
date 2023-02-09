@@ -17,9 +17,7 @@ form.onsubmit = async event => {
   while (list.firstChild) {
     list.removeChild(list.firstChild);
   }
-  //let searchWord = form.SearchInput.value;
 
-  // Iterate over the returned image data and create list items for each image.
   json.hits.forEach(img => {
     let li = document.createElement('li');
     let image = document.createElement('img');
