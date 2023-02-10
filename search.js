@@ -9,13 +9,15 @@ let url;
 let currentPage = 1;
 let totalPages = 0;
 let searchInput
+let colorSelection = '';
 
 form.onsubmit = async event => {
   event.preventDefault();
 
   searchInput = form.searchInput.value;
+  colorSelection = form.colorSelection.value;
 
-  url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10`;
+  url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10&colors=${colorSelection}`;
 
   let response = await fetch(url);
   let json = await response.json();
@@ -36,7 +38,7 @@ form.onsubmit = async event => {
     li.appendChild(image);
     li.appendChild(user);
   });
-
+  //form.searchInput.value = '';
   buttonStatus();
 };
 
@@ -45,8 +47,9 @@ nextButton.onclick = async () => {
 
   currentPage++;
   searchInput = form.searchInput.value;
+  colorSelection = form.colorSelection.value;
 
-  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10`;
+  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10&colors=${colorSelection}`;
 
   let response = await fetch(url);
   let json = await response.json();
@@ -74,8 +77,9 @@ previousButton.onclick = async () => {
 
   currentPage--;
   searchInput = form.searchInput.value;
+  colorSelection = form.colorSelection.value;
 
-  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10`;
+  let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10&colors=${colorSelection}`;
 
   let response = await fetch(url);
   let json = await response.json();
