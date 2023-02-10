@@ -8,18 +8,14 @@ html {
   font-family: sans-serif;
 }
 
-input, button {
-  padding: 5px;
-}
-
 html, body {
   height: 100%;
 }
 body {
-    display: grid;
-    place-items: center;
-    margin-top: 20px;
-  }
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
 
 #logoBox{
   display: grid;
@@ -35,43 +31,59 @@ form{
 }
 
 #searchInput{
-    background-color: #f2f2f2;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
 }
 
-#searchbox{
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #ccc;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template:  
-  }
+#searchBox{
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+#searchInputButton{
+  width: 100%;
+  padding: 10px;
+  background-color: #2b2929;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
 
-#submit {
-    width: 40%;
-    padding: 10px;
-    background-color: #333;
-    color: #f5f5f5;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-left: 10px;
-  }
+#colorSelectionButton{
+  width: 100%;
+  padding: 10px;
+  background-color: #2b2929;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
 
-#submit:hover {
-    background-color: #1fb66f;
-    color: #474343;
-  }
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2b2929;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #1fb66f;
+  color: #474343;
+}
 
 #resultBox{
   margin-top: 20px;
-  
 }
 #imgList{
   display: grid;
