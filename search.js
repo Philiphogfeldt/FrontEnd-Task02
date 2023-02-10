@@ -2,8 +2,12 @@ const apiKey = '33414549-51bff4c83ee9ddf1982fd6577';
 
 let form = document.querySelector('form');
 let list = document.querySelector('#imgList');
+let nextButton = document.querySelector('#nextButton');
+let previousButton = document.querySelector('#previousButton');
+let lastPageButton = document.querySelectorAll('#lastPageButton')
 let url;
 let currentPage = 1;
+let totalPages = 0;
 let searchInput
 
 form.onsubmit = async event => {
@@ -11,13 +15,13 @@ form.onsubmit = async event => {
 
   searchInput = form.searchInput.value;
 
-  //let url = 'https://pixabay.com/api/?key=' + apiKey +'&q=' + searchInput;
-  //url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=1&per_page=10`;
   url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10`;
 
   let response = await fetch(url);
   let json = await response.json();
   
+  totalPages = Math.ceil(json.totalHits / 10);
+
   while (list.firstChild) {
     list.removeChild(list.firstChild);
   }
@@ -33,8 +37,7 @@ form.onsubmit = async event => {
     li.appendChild(user);
   });
 
-  //form.searchInput.value = '';
-
+  buttonStatus();
 };
 
 
@@ -62,6 +65,9 @@ nextButton.onclick = async () => {
     li.appendChild(image);
     li.appendChild(user);
   });
+
+  buttonStatus();
+
 };
 
 previousButton.onclick = async () => {
@@ -88,5 +94,30 @@ previousButton.onclick = async () => {
     li.appendChild(image);
     li.appendChild(user);
   });
+
+  buttonStatus();
 };
 
+function buttonStatus() {
+  if (currentPage === 1) {
+    previousButton.style.display = 'none';
+  } else {
+    previousButton.style.display = 'inline-block';
+  }
+  
+  if (currentPage === totalPages) {
+    nextButton.style.display = 'none';
+  } else {
+    nextButton.style.display = 'inline-block';
+  }
+}
+
+//nextButton.onclick = async event => {
+//  currentPage += 1;
+//  form.onsubmit();
+//};
+
+//prevButton.onclick = async event => {
+//  currentPage -= 1;
+//  form.onsubmit();
+//};
