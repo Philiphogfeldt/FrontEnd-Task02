@@ -6,6 +6,11 @@
 
 html {
   font-family: sans-serif;
+  background-image: url('landscape-7744216_1920.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
 }
 
 html, body {
@@ -17,10 +22,7 @@ body {
   margin-top: 10px;
 }
 
-#logoBox{
-  display: grid;
-  grid-template:
-  "a a";
+#logoBox{  
 }
 
 form{
