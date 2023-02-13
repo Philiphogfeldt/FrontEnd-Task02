@@ -22,9 +22,6 @@ body {
   margin-top: 10px;
 }
 
-#logoBox{  
-}
-
 form{
   display: grid;
   grid-template:
@@ -80,7 +77,7 @@ button {
 }
 
 button:hover {
-  background-color: #1fb66f;
+  background-color: #e68619;
   color: #474343;
 }
 
