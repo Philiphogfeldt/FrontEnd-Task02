@@ -37,16 +37,12 @@ form.onsubmit = async event => {
     li.appendChild(image);
     li.appendChild(user);
   });
-  //form.searchInput.value = '';
+  form.searchInput.value = '';
   buttonStatus();
 };
 
-
 nextButton.onclick = async () => {
-
   currentPage++;
-  searchInput = form.searchInput.value;
-  colorSelection = form.colorSelection.value;
 
   let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10&colors=${colorSelection}`;
 
@@ -73,10 +69,7 @@ nextButton.onclick = async () => {
 };
 
 previousButton.onclick = async () => {
-
   currentPage--;
-  searchInput = form.searchInput.value;
-  colorSelection = form.colorSelection.value;
 
   let url = `https://pixabay.com/api/?key=${apiKey}&q=${searchInput}&page=${currentPage}&per_page=10&colors=${colorSelection}`;
 
@@ -102,25 +95,21 @@ previousButton.onclick = async () => {
 };
 
 function buttonStatus() {
+  if (totalPages === 0) {
+    previousButton.style.display = 'none';
+    nextButton.style.display = 'none';
+  }
   if (currentPage === 1) {
     previousButton.style.display = 'none';
-  } else {
+  } 
+  else {
     previousButton.style.display = 'inline-block';
   }
   
   if (currentPage === totalPages) {
     nextButton.style.display = 'none';
-  } else {
+  } 
+  else {
     nextButton.style.display = 'inline-block';
   }
 }
-
-//nextButton.onclick = async event => {
-//  currentPage += 1;
-//  form.onsubmit();
-//};
-
-//prevButton.onclick = async event => {
-//  currentPage -= 1;
-//  form.onsubmit();
-//};

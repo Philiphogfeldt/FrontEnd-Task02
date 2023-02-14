@@ -10,12 +10,12 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  
 }
 
 html, body {
   height: 100%;
 }
+
 body {
   display: grid;
   place-items: center;
@@ -97,6 +97,8 @@ img{
 }
 li {
   list-style-type: none;
+  font-weight: bold;
+  font-size: 20px;
   width: 400px;
 }
 #buttonBox{
