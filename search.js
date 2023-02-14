@@ -4,7 +4,6 @@ let form = document.querySelector('form');
 let list = document.querySelector('#imgList');
 let nextButton = document.querySelector('#nextButton');
 let previousButton = document.querySelector('#previousButton');
-let lastPageButton = document.querySelectorAll('#lastPageButton');
 let url;
 let currentPage = 1;
 let totalPages = 0;
