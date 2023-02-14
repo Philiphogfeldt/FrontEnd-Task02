@@ -31,10 +31,13 @@ form.onsubmit = async event => {
     let li = document.createElement('li');
     let image = document.createElement('img');
     let user = document.createElement('photoInfo');
+    let tags = document.createElement('tagsInfo');
     image.src = img.webformatURL;
     user.textContent = `Photo: ${img.user}`;
+    tags.textContent = `Tags: ${img.tags}`;
     list.appendChild(li);
     li.appendChild(image);
+    li.appendChild(tags);
     li.appendChild(user);
   });
   form.searchInput.value = '';
@@ -57,15 +60,17 @@ nextButton.onclick = async () => {
     let li = document.createElement('li');
     let image = document.createElement('img');
     let user = document.createElement('photoInfo');
+    let tags = document.createElement('tagsInfo');
     image.src = img.webformatURL;
     user.textContent = `Photo: ${img.user}`;
+    tags.textContent = `Tags: ${img.tags}`;
     list.appendChild(li);
     li.appendChild(image);
+    li.appendChild(tags);
     li.appendChild(user);
   });
 
   buttonStatus();
-
 };
 
 previousButton.onclick = async () => {
@@ -84,10 +89,13 @@ previousButton.onclick = async () => {
     let li = document.createElement('li');
     let image = document.createElement('img');
     let user = document.createElement('photoInfo');
+    let tags = document.createElement('tagsInfo');
     image.src = img.webformatURL;
     user.textContent = `Photo: ${img.user}`;
+    tags.textContent = `Tags: ${img.tags}`;
     list.appendChild(li);
     li.appendChild(image);
+    li.appendChild(tags);
     li.appendChild(user);
   });
 
@@ -95,10 +103,10 @@ previousButton.onclick = async () => {
 };
 
 function buttonStatus() {
-  if (totalPages === 0) {
-    previousButton.style.display = 'none';
-    nextButton.style.display = 'none';
-  }
+  // if (totalPages === 0) {
+  //   previousButton.style.display = 'none';
+  //   nextButton.style.display = 'none';
+  // }
   if (currentPage === 1) {
     previousButton.style.display = 'none';
   } 

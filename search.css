@@ -91,16 +91,20 @@ button:hover {
   "e f g h"
   "i i j j" / auto 1fr;
   gap: 10px;
+  justify-content:flex-end;
 }
+
 img{
   width: 400px;
 }
+
 li {
   list-style-type: none;
   font-weight: bold;
   font-size: 20px;
   width: 400px;
 }
+
 #buttonBox{
   display: grid;
   grid-template:
@@ -108,10 +112,12 @@ li {
   gap: 5px;
   margin-top: 20px;
 }
+
 #previousButton{
   grid-area: a;
   padding: 20px;
 }
+
 #nextButton{
  grid-area: b;
  padding: 20px;
