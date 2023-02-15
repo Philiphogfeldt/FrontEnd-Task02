@@ -87,7 +87,6 @@ button:hover {
   "e f g h"
   "i i j j" / auto 1fr;
   gap: 10px;
-  justify-content:flex-end;
 }
 
 img{
@@ -130,7 +129,6 @@ li {
     "g h i"
     "j j j" / 1fr 1fr;
     gap: 5px;
-    justify-content:flex-end;
   }
 
   img{
@@ -156,7 +154,6 @@ li {
     "g h"
     "i j" / 1fr 1fr;
     gap: 5px;
-    justify-content:flex-end;
   }
 }
 
@@ -175,7 +172,6 @@ li {
     "i"
     "j" / 1fr;
     gap: 5px;
-    justify-self: flex-end;
   }
   img{
     object-fit: cover;
