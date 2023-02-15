@@ -95,6 +95,8 @@ img{
   width: 100%;}
 
 li {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   font-weight: bold;
   font-size: 17px;
