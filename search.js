@@ -103,21 +103,22 @@ previousButton.onclick = async () => {
 };
 
 function buttonStatus() {
-  // if (totalPages === 0) {
-  //   previousButton.style.display = 'none';
-  //   nextButton.style.display = 'none';
-  // }
   if (currentPage === 1) {
     previousButton.style.display = 'none';
-  } 
+  }
   else {
     previousButton.style.display = 'inline-block';
   }
   
   if (currentPage === totalPages) {
     nextButton.style.display = 'none';
-  } 
+  }
   else {
     nextButton.style.display = 'inline-block';
   }
+}
+
+if (form.searchInput.value === '') {
+  previousButton.style.display = 'none';
+  nextButton.style.display = 'none';
 }
