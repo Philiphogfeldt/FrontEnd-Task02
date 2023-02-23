@@ -5,7 +5,7 @@ let list = document.querySelector('#imgList');
 let nextButton = document.querySelector('#nextButton');
 let previousButton = document.querySelector('#previousButton');
 let url;
-let currentPage = 1;
+let currentPage;
 let totalPages = 0;
 let searchInput;
 let colorSelection = '';
