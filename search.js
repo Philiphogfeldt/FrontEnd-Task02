@@ -84,15 +84,20 @@ function createObjects(json) {
 function buttonStatus() {
   if (currentPage === 1) {
     previousButton.style.display = 'none';
-  } 
+  }
   else {
     previousButton.style.display = 'inline-block';
   }
   
   if (currentPage === totalPages) {
     nextButton.style.display = 'none';
-  } 
+  }
   else {
     nextButton.style.display = 'inline-block';
   }
+}
+
+if (form.searchInput.value === '') {
+  previousButton.style.display = 'none';
+  nextButton.style.display = 'none';
 }
