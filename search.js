@@ -12,6 +12,7 @@ let colorSelection = '';
 
 form.onsubmit = async event => {
   event.preventDefault();
+  currentPage = 1;
 
   searchInput = form.searchInput.value;
   colorSelection = form.colorSelection.value;
@@ -27,19 +28,7 @@ form.onsubmit = async event => {
     list.removeChild(list.firstChild);
   }
 
-  json.hits.forEach(img => {
-    let li = document.createElement('li');
-    let image = document.createElement('img');
-    let user = document.createElement('photoInfo');
-    let tags = document.createElement('tagsInfo');
-    image.src = img.webformatURL;
-    user.textContent = `Photo: ${img.user}`;
-    tags.textContent = `Tags: ${img.tags}`;
-    list.appendChild(li);
-    li.appendChild(image);
-    li.appendChild(tags);
-    li.appendChild(user);
-  });
+  createObjects(json);
   form.searchInput.value = '';
   buttonStatus();
 };
@@ -56,20 +45,7 @@ nextButton.onclick = async () => {
     list.removeChild(list.firstChild);
   }
 
-  json.hits.forEach(img => {
-    let li = document.createElement('li');
-    let image = document.createElement('img');
-    let user = document.createElement('photoInfo');
-    let tags = document.createElement('tagsInfo');
-    image.src = img.webformatURL;
-    user.textContent = `Photo: ${img.user}`;
-    tags.textContent = `Tags: ${img.tags}`;
-    list.appendChild(li);
-    li.appendChild(image);
-    li.appendChild(tags);
-    li.appendChild(user);
-  });
-
+  createObjects(json);
   buttonStatus();
 };
 
@@ -85,11 +61,16 @@ previousButton.onclick = async () => {
     list.removeChild(list.firstChild);
   }
 
+  createObjects(json);
+  buttonStatus();
+};
+
+function createObjects(json) {
   json.hits.forEach(img => {
     let li = document.createElement('li');
     let image = document.createElement('img');
-    let user = document.createElement('photoInfo');
-    let tags = document.createElement('tagsInfo');
+    let user = document.createElement('p');
+    let tags = document.createElement('p');
     image.src = img.webformatURL;
     user.textContent = `Photo: ${img.user}`;
     tags.textContent = `Tags: ${img.tags}`;
@@ -98,15 +79,9 @@ previousButton.onclick = async () => {
     li.appendChild(tags);
     li.appendChild(user);
   });
-
-  buttonStatus();
-};
+}
 
 function buttonStatus() {
-  // if (totalPages === 0) {
-  //   previousButton.style.display = 'none';
-  //   nextButton.style.display = 'none';
-  // }
   if (currentPage === 1) {
     previousButton.style.display = 'none';
   } 

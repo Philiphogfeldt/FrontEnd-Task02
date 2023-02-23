@@ -42,6 +42,7 @@ form{
   padding: 10px;
   border-radius: 20px;
   margin-bottom: 20px;
+  
 }
 #searchInputButton{
   width: 100%;
@@ -91,7 +92,7 @@ button:hover {
   "e f g h"
   "i i j j" / auto 1fr;
   gap: 10px;
-  justify-content:flex-end;
+  
 }
 
 img{
